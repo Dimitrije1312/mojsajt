@@ -1,0 +1,612 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+*{
+    margin: 0;  
+    padding: 0;
+    font-family: 'Poppins' ,sans-serif;
+}
+@keyframes dugme{
+    0%{border-color: #E9B333; color: #E9B333; background-color: #231F20;}
+    100%{border-color:black; color: black; background-color: #E9B333;}
+}
+@keyframes dugmeBack{
+    0%{border-color: #231F20; color:#231F20; background-color: #E9B333;}
+    100%{border-color: #231F20; color: #E9B333; background-color: #231F20;}
+}
+a{
+    text-decoration: none;
+}   
+html{
+    scroll-behavior: smooth;
+}
+    
+#container-nav{
+    width:100%;
+    height: 145px;
+    background-color: #231F20;
+    display: flex;
+    justify-content:space-between;
+    padding-top: 7.5px;
+}
+#menu-nav ul{
+    list-style-type:none;
+    display: flex;
+    color: white;
+    padding-right:300px;
+    padding-top: 50px;
+}
+#menu-nav ul li {
+    position: relative;
+    margin-left: 50px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+}
+#menu-nav ul li a{
+    color: white;
+    transition: all 0.3s;
+}
+#menu-nav ul li a.active{
+    color: #EBB833;
+}
+#menu-nav ul li a::before{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0%;
+    width: 0%;
+    height: 3px;
+    background-color: #E9B333;
+    transition: all .5s;
+}
+#menu-nav ul li a:hover::before{
+    width: 100%;
+}
+#logo-block{
+    width: 100px;
+    padding-left: 150px;
+}
+#logo-block img{
+    height:130px;
+    
+}
+#overlay{
+    height:950px;
+    background-image:url('../images/overlay2i.jpg');   
+    background-size: cover;
+    background-position:center;
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.7 );
+    background-attachment: fixed;
+}
+#main-content{
+   width:fit-content ;
+   color: white;
+   position:relative;
+   top:250px;
+   left:625px;
+  
+}
+#main-content h1{
+    font-size: 60px;
+}
+#main-content h2{
+    text-align: center;
+}
+#main-content button{
+    display: block;
+    margin: 45px auto;
+    background-color: #E9B333;
+    font-size: 20px;
+    padding: 10px 25px;
+    border: 2px solid white;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 10px 10px 10px black;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+#main-content button:hover{
+    background-color: #ffb619;
+    transition: all 0.3s;
+}
+#menumain {
+    width: 100%;
+    height: 570px;
+    background-color: #231F20;
+    display: flex;
+    justify-content: space-evenly;  
+    flex-direction: row; 
+    padding: 50px 0px;
+}
+
+.kolone {
+    width: 300px;
+}
+.kolone img {
+    height: 210px;
+    width: 320px;  
+    object-fit: cover;
+    border-radius: 5px;
+}
+.kolone h2{
+    color:#EBB833;
+    text-align:center;
+    font-weight:600;
+    margin-top:15px;
+}
+.kolone p{
+    color:white;
+    text-align:center;
+    margin-top: 25px;
+}
+.kolone button{
+    display: block;
+    margin: 35px auto;
+    border: 2px solid #E9B333;
+    padding: 15px 15px;
+    font-weight: 600;
+    background-color: #231F20;
+    font-size: 15px;
+    color: #E9B333;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 1.5s;
+    animation: dugmeBack;
+    animation-duration: 0.5s;
+    animation-fill-mode: backwards;
+}
+
+.kolone button:hover{
+    animation: dugme;
+    animation-duration: 0.3s;
+    transition: all 1.5s;
+    background-color: #ffb619;
+    animation-fill-mode: both;
+}
+.dugme1{
+   position:relative ; 
+   width: fit-content;
+   height:fit-content;
+   top: 25px;
+   left: 90px;
+   align-items: center;
+}
+.dugme2{
+    position:relative ; 
+    width: fit-content;
+    height:fit-content;
+    left:97px;
+    top:75px;
+}
+#raspored-nav{
+    background-color: #231F20;
+    width: 100%;
+    height: 650px;
+    display: flex;
+    justify-content:left; 
+}
+.raspored-slika{
+    width:900px;
+    height: 600px;
+    
+}
+.raspored-slika img{
+    max-width: 800px;
+    max-height:800px;
+    padding-top: 55px;
+    padding-left: 100px;
+}
+.raspored-tekst{
+   width:720px;
+   height:650px;
+ 
+}   
+.raspored-tekst h3{
+    font-size: 45px;
+    color: #E9B333;
+    margin-left: 110px;
+    padding-top:5px;
+}
+.raspored-tekst p{
+    font-size: 18px;
+    color: white;
+    text-align: left;
+    margin-left:55px;
+    padding-top: 20px;
+}
+#slika2{
+    width:100%;
+    height: 450px;
+    background-image:url("../images/probica.jpg");
+    background-position:left;
+    background-size: cover;
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.7 );
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+#slika2 h2{
+    font-size:64px;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+    padding-top: 135px;
+}
+#slika2 p{
+    font-size: 28px;
+    font-weight: 700;
+    color: #E9B333;
+    text-align: center;
+    text-transform: uppercase;
+}
+#footerprvi {
+    width: 100%;
+    height: 200px;
+    background-color: #231F20;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-evenly; 
+    align-items: center; 
+}
+
+.col3 {
+    width: 33%; 
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.col3 h3 {
+    font-size: 22px;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 700;
+   
+}
+
+.col3 p {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+}
+.col3 i{
+    font-size: 30px;
+    color:#E9B333;
+    padding-top: 20px;
+    padding-left: 7.5px;
+}
+.col3 ul{
+    list-style-type: none;
+}
+.col3 a{
+    color: white;
+    text-decoration: none;
+}
+
+/* Kikboks.html */
+#kikbokspika{
+    width:100%;
+    height:400px;
+    background-image:url('../images/kikboksoverlay.jpg');
+    background-position: fixed;
+    background-size: cover;
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.7 );
+    display: flex;
+    justify-content: center;
+}
+#kikboksmain{
+    width: fit-content;
+    height: fit-content;
+    font-size: 36px;
+    font-weight: 700;
+    color: white;
+    padding-top:150px ;
+}
+#okbku{
+    height:520px;
+    width:100%;
+    background-color: #231F20;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-evenly;
+}
+.kbkslika{
+    height: 480px;
+    width:425px;
+    border-radius:15px;
+    background-image: url('../images/kickboxer2.jpg');
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.4 );
+    background-position: top;
+}
+.kbktekst{
+    width: 500px;
+    height:fit-content;
+    color: white;
+    padding-top:85px;
+    text-align: center;
+    position:relative;
+    padding-right: 100px;
+}
+.kbktekst h2{
+    font-size:32px;
+    font-weight: 700;
+    color: #E9B333;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 15px;
+}
+.kbktekst p{
+    font-size: 18px;
+}
+#galerija{
+    background-image:url('../images/image00002.jpeg') ;
+    background-position:bottom;
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 1050px;
+    width: 100%;
+}
+#galerija h2{
+    font-size:32px;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top:15px;
+}
+#galerija-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+.photoklas1{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.photoklas2{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    
+}
+#galerija-container img{
+    width: 400px;
+    object-fit:cover;
+    border-radius: 10px;
+    height: 290px;
+    margin-bottom: 30px;
+    box-shadow:10px 10px 10px black;
+    transition:0.7s ease;
+}
+#galerija-container img:hover{
+    transform: scale(1.06);
+}
+#istorija-container{
+    width: 100%;
+    height:500px;
+    background-color: #231F20;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+}
+.istorija-slika{
+    height:485px;
+    width: 500px;
+    background-image: url('../images/poslednja.jpg');
+    background-position: bottom;
+    border-radius: 50%;
+    margin-right: 50px;
+   
+}
+.istorija-tekst{
+    width:500px;
+    height: fit-content;
+    text-align: left;
+    color: white;
+    font-size: 18px;
+    padding-left: 50px;
+}
+.istorija-tekst h2{
+    font-size: 36px;
+    font-weight: 700;
+    color: #E9B333;
+    text-transform: uppercase;
+    padding-bottom: 35px;
+}
+
+.malazuta{
+    border: none;              
+    height: 1px;               
+    margin: 0;                 
+    width: 100%;               
+    background: linear-gradient(90deg, #231F20, #E9B333, #231F20); 
+    position: absolute;
+    margin-bottom: 180px;
+}
+/* Kontakt html */
+#kontaktoverlay{
+    width: 100%;
+    height: 450px;
+    background-image: url("../images/kontaktproba3.jpg");
+    background-position: top;
+    background-attachment:fixed;
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.7 );
+    background-attachment: fixed;
+}
+#kontaktoverlay h1{
+    color: white;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    padding-top: 150px;
+}
+#cont-form{
+    width:100%;
+    height: 700px;
+    background-color: #231F20;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+}
+.form-col1{
+    height:600px;
+    width:620px;   
+}
+.form-col1 h2{
+    text-transform: uppercase;
+    color: #E9B333;
+    font-size: 36px;
+    font-weight: 700;
+    padding-bottom: 25px;
+}
+.forma1{
+    display: flex;
+    gap: 20px;
+}
+.forma1 .forma2 {
+    height: fit-content;
+    width: fit-content;
+}
+.forma1 input{
+    width:300px;
+    height:40px;
+    background-color: #231F20;
+    border:1px solid #E9B333;
+    border-radius:10px;
+    font-size: 16px;
+    color:white;
+    font-weight: 500;
+    padding-left: 10px;
+    margin-top: 15px;
+}
+.forma2{
+    display: flex;
+    gap:20px;
+}
+
+.forma2 input{
+    width:300px;
+    height:40px;
+    background-color: #231F20;
+    border:1px solid #E9B333;
+    border-radius:10px;
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+    padding-left: 10px;
+    margin-top: 35px;
+}
+.form-col1 textarea{
+    width:620px;
+    background-color:#231F20;
+    resize: none;
+    border:1px solid #E9B333;
+    font-size: 16px;
+    margin-top: 70px;
+    padding-left: 10px;
+    color: white;
+    border-radius: 15px;
+}
+.forma2 input:focus, .forma1 input:focus, .form-col1 textarea:focus{
+    outline: none;
+    box-shadow: 0px 0px 5px #E9B333;
+    transition: all 0.2s;
+}
+.form-col1 input[type="submit"]{
+    display: block;
+    margin: 35px auto;
+    border:2px solid #E9B333;
+    padding: 10px 100px;
+    font-weight: 500;
+    background-color:#231F20;
+    font-size: 15px;
+    color: #E9B333;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 2s;
+    animation: dugmeBack;
+    animation-duration: 0.5s;
+}
+.form-col1 input[type="submit"]:hover{
+    transition: all 2s;
+    animation: dugme;
+    animation-duration: 0.5s;
+    transition: all 2s;
+    animation-fill-mode: both;
+}
+.map1{
+    width:575px;
+    height: 600px;
+}
+.map1 iframe{
+    height:100%;
+    width:100%;
+    border-radius: 20px;
+}
+/*O autoru.html  */
+
+#overlayautor{
+    width:100%;
+    height:400px;
+    background-image:url("../images/kontaktproba2.jpg");
+    background-size:cover;
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.5 );
+    background-position: top;
+}
+#overlayautor h1{
+    font-size: 42px;
+    color: white;
+    text-align: center;
+    padding-top:225px;
+}
+#mainautor{
+    width: 100%;
+    height:550px;
+    background-color: #231F20;
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: center;
+
+}
+.mojaslika{
+    height:510px;
+    width:450px;
+    background-image: url("../images/autor.jpg");
+    object-fit: cover;
+    background-position: center;
+    border-radius:10px;
+    margin-top: 25px;
+}   
+.mojtekst{
+    width: fit-content;
+    height: fit-content;
+    padding-top:35px;
+    padding-left:60px;
+}
+.mojtekst p{
+    font-size:20px;
+    color: white;
+    padding-top:25px;
+}
+.mojtekst h2{
+    font-size: 36px;
+    color: #E9B333;
+    font-weight:700;
+    text-transform: uppercase;
+
+}
